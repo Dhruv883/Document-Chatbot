@@ -7,8 +7,7 @@ from langchain.prompts import PromptTemplate
 
 
 def get_conversational_chain():
-    prompt_template = """Answer the question as detailed as possible from the provided context, make sure to provide 
-    all the details, if the answer is not in provided context just say, "Cannot find the answer", 
+    prompt_template = """Answer the question comprehensively using only the information provided in the context. Ensure that all relevant details are included. If the necessary information is not available, respond with "Cannot Answer this question", 
     don't provide the wrong answer\n\n Context:\n {context}?\n Question: \n{question}\n
 
     Answer:
